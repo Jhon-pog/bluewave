@@ -133,39 +133,46 @@ export default function blue() {
         </section>
 
         <section className={styles.hero} id="menu">
-          <h1>Nossos Projetos Ambientais</h1>
-        </section>
+  <h1>Nossos Projetos Ambientais</h1>
+</section>
 
-        <section className={styles.section}>
-          <div className={styles.grid}>
-            <div className={styles.card}>
-              <img src="https://images.unsplash.com/photo-1514907283155-ea5f4094c70c?q=80&w=1170" alt="Monitoramento de Recifes" />
-              <div className={styles.cardContent}>
-              <h3>Monitoramento de Recifes</h3>
-                <p>Análise científica contínua da saúde dos recifes de coral e impactos das mudanças climáticas.</p>
-                <a className={styles.cardLink} href="/recife">Saiba mais</a>
-              </div>
-            </div>
+<section className={styles.section}>
+  <div className={styles.sectionContent}> {/* Garante o alinhamento e largura máxima */}
+    <div className={styles.grid}>
+      
+      {/* CARD 1 */}
+      <div className={styles.card}>
+        <img src="https://images.unsplash.com/photo-1514907283155-ea5f4094c70c?q=80&w=1170" alt="Monitoramento de Recifes" />
+        <div className={styles.cardContent}>
+          <h3>Monitoramento de Recifes</h3>
+          <p>Análise científica contínua da saúde dos recifes de coral e impactos das mudanças climáticas.</p>
+          <a className={styles.cardLink} href="/recife">Saiba mais</a>
+        </div>
+      </div>
 
-            <div className={styles.card}>
-              <img src="https://images.unsplash.com/photo-1618277043431-1c85e8462f70?q=80&w=1155" alt="Mutirões de Limpeza" />
-              <div className={styles.cardContent}>
-                <h3>Multirões de Limpeza</h3>
-                <p>Ações periódicas para remoção de resíduos e conscientização comunitária.</p>
-                <a className={styles.cardLink} href="/multiroes">Saiba mais</a>
-              </div>
-            </div>
+      {/* CARD 2 */}
+      <div className={styles.card}>
+        <img src="https://images.unsplash.com/photo-1618277043431-1c85e8462f70?q=80&w=1155" alt="Mutirões de Limpeza" />
+        <div className={styles.cardContent}>
+          <h3>Mutirões de Limpeza</h3>
+          <p>Ações periódicas para remoção de resíduos e conscientização comunitária.</p>
+          <a className={styles.cardLink} href="/multiroes">Saiba mais</a>
+        </div>
+      </div>
 
-            <div className={styles.card}>
-              <img src="https://images.unsplash.com/photo-1690559490662-bd2afb76e1bd?q=80&w=1172" alt="Combate ao Plástico" />
-              <div className={styles.cardContent}>
-                <h3>Combate ao Plástico</h3>
-                <p>Iniciativas para reduzir plásticos descartáveis e incentivar alternativas sustentáveis.</p>
-                <a className={styles.cardLink} href="/combate">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* CARD 3 */}
+      <div className={styles.card}>
+        <img src="https://images.unsplash.com/photo-1690559490662-bd2afb76e1bd?q=80&w=1172" alt="Combate ao Plástico" />
+        <div className={styles.cardContent}>
+          <h3>Combate ao Plástico</h3>
+          <p>Iniciativas para reduzir plásticos descartáveis e incentivar alternativas sustentáveis.</p>
+          <a className={styles.cardLink} href="/combate">Saiba mais</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
         <section className="testimonials" id="funcionarios">
           <div className={styles.sectionContent}>

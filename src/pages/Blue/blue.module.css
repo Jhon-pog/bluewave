@@ -192,36 +192,89 @@
 }
 
 /* ================= PROJECTS ================= */
+/* ================= PROJECTS ================= */
+
+/* Seção do Título */
 .hero {
-  padding: 60px 0;
+  padding: 60px 0 20px 0;
   text-align: center;
+  background-color: #ffffff; /* Fundo alterado para branco */
 }
 
+.hero h1 {
+  color: #161b44; /* Título agora em azul escuro para dar contraste no fundo branco */
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Seção dos Cards */
 .section {
-  padding: 80px 0;
+  padding: 0 0 80px 0;
+  background-color: #ffffff; /* Fundo alterado para branco */
 }
 
+/* O Grid que segura os cards */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
+/* Ajuste nos Cards para destacar no fundo branco */
 .card {
-  background: white;
+  background: #ffffff;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  /* Uma sombra levemente mais suave para flutuar bem no fundo branco */
+  box-shadow: 0 10px 30px rgba(22, 27, 68, 0.08); 
+  border: 1px solid #f0f0f0; /* Uma borda sutil para acabamento */
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efeito opcional de levitar ao passar o mouse */
 }
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
 
 .cardContent {
-  padding: 15px;
+  padding: 25px;
+}
+
+.cardContent h3 {
+  color: #161b44;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.cardContent p {
+  color: #666; /* Texto de apoio em cinza escuro para melhor leitura */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Estilização dos Botões "Saiba mais" */
+.cardLink {
+  display: inline-block;
+  color: #161b44;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #f1f5f9; /* Fundo cinza claro padrão */
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.cardLink:hover {
+  background: #161b44; /* Fica azul escuro ao passar o mouse */
+  color: #ffffff;      /* Texto fica branco */
 }
 
 /* ================= CAROUSEL ================= */
