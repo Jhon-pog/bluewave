@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from  './multiroes.module.css'; 
+import styles from './multiroes.module.css'; 
 
 export default function Multiroes() {
   const [menuAtivo, setMenuAtivo] = useState(false);
@@ -26,39 +26,37 @@ export default function Multiroes() {
 
   return (
     <>
-     <header>
-  <nav className={styles.navbar}>
-  <div className={styles.navInner}>
-    </div>
-    
-   <li>
-  <Link
-    to="/"
-    className={styles.navLink}
-    onClick={() => setMenuAtivo(false)}
-  >
-   <h2>BlueWave</h2>
-  </Link>
-</li>
-    <div
-      className={styles.hamburger}
-      id="hamburger"
-      onClick={() => setMenuAtivo(!menuAtivo)}
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+      <header>
+        <nav className={styles.navbar}>
+          {/* Logo posicionado corretamente dentro da navbar */}
+          <Link
+            to="/"
+            className={styles.navLink}
+            onClick={() => setMenuAtivo(false)}
+          >
+            <h2>BlueWave</h2>
+          </Link>
 
-    <ul className={`${styles.navMenu} ${menuAtivo ? styles.active : ""}`} id="nav-menu">
-      <li><Link to="/" className={styles.navLink}>← Voltar</Link></li>
-      <li><a href="#alertas" className={styles.navLink}>Alertas</a></li>
-      <li><a href="#proximos" className={styles.navLink}>Próximos Mutirões</a></li>
-      <li><a href="#inscricao" className={styles.navLink}>Inscrição</a></li>
-    </ul>
+          {/* Botão Hambúrguer */}
+          <div
+            className={styles.hamburger}
+            id="hamburger"
+            onClick={() => setMenuAtivo(!menuAtivo)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
 
-  </nav>
-</header>
+          {/* Menu de navegação */}
+          <ul className={`${styles.navMenu} ${menuAtivo ? styles.active : ""}`} id="nav-menu">
+            <li><Link to="/" className={styles.navLink}>← Voltar</Link></li>
+            <li><a href="#alertas" className={styles.navLink}>Alertas</a></li>
+            <li><a href="#proximos" className={styles.navLink}>Próximos Mutirões</a></li>
+            <li><a href="#inscricao" className={styles.navLink}>Inscrição</a></li>
+          </ul>
+        </nav>
+      </header>
 
       <main>
         <section className={styles.internalHero}>

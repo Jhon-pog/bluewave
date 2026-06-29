@@ -7,7 +7,6 @@ export default function Recife() {
 
   return (
     <>
-      <header>
         <header>
   {/* A nav fica 100% de largura por fora */}
   <nav className={styles.navbar}>
@@ -33,10 +32,11 @@ export default function Recife() {
     </div>
   </nav>
 </header>
-      </header>
+
       <main style={{ paddingTop: '80px' }}>
         {/* SEÇÃO MONITORAMENTO E EXPLICAÇÃO */}
-        <section className={styles.aboutSection}>
+        <section
+    className={styles.aboutSection}id="monitoramento">
           <div className={styles.sectionContent}>
             <div className={styles.aboutContainer}>
               <div className={styles.aboutText}>
@@ -53,7 +53,7 @@ export default function Recife() {
         </section>
 
         {/* SEÇÃO DE IMPACTOS NACIONAIS */}
-        <section className={styles.aboutSection}> 
+        <section className={styles.aboutSection}id="impactos">
   <div className={styles.sectionContent}>
     <div className={styles.aboutContainer} style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
       
