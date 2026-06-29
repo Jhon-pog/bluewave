@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from "./blue.module.css";
+
 export default function blue() {
   const [menuAtivo, setMenuAtivo] = useState(false);
   const [slideIndex, setSlideIndex] = useState(0);
@@ -9,47 +10,35 @@ export default function blue() {
     <>
      <header>
   <nav className={styles.navbar}>
-
     <div className={styles.navInner}>
-
+      
+      {/* Logótipo alinhado à esquerda */}
       <Link to="/" className={styles.navLogo}>
         <h2>Blue Wave</h2>
       </Link>
 
-      <div
-        className={styles.hamburger}
-        onClick={() => setMenuAtivo(!menuAtivo)}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <ul
-       className={ menuAtivo ? styles.navMenu: `${styles.navMenu} ${styles.navMenuHidden}`}
-      >
-        <li><a className={styles.navLink} href="#">Início</a></li>
-        <li><a className={styles.navLink} href="#sobre">Sobre</a></li>
-        <li><a className={styles.navLink} href="#galeria">Doações</a></li>
-        <li><a className={styles.navLink} href="#menu">Projetos</a></li>
-        <li><a className={styles.navLink} href="#funcionarios">Funcionários</a></li>
-        <li><a className={styles.navLink} href="#contato">Contato</a></li>
+      {/* Menu com os links agrupados à direita */}
+      <ul className={styles.navMenu}>
+        <li><Link to="/" className={styles.navLink}>← Voltar</Link></li>
+        <li><a className={styles.navLink} href="#monitoramento">Monitoramento</a></li>
+        <li><a className={styles.navLink} href="#impactos">Impactos</a></li>
+        <li><a className={styles.navLink} href="#catalogo">Catálogo</a></li>
       </ul>
 
     </div>
-
   </nav>
 </header>
 
-      <main style={{ paddingTop: '80px' }}>
+      {/* Alterado para incluir o fundo escuro e o ajuste de margem que elimina o vazamento */}
+<main style={{ paddingTop: '80px', backgroundColor: '#161b44', marginTop: '-1px' }}>
         {/* HERO ORIGINAL RESTAURADA */}
         <section className={styles.heroSection}>
           <div className={styles.sectionContent}>
             <div className="hero-details">
-              <h2 className="hero-title">Vida e Conservação Marinha</h2>
-              <h3 className="hero-subtitle">Ajudando o meio-ambiente!</h3>
+              <h2 className={styles.heroTitle}>Vida e Conservação Marinha</h2>
+              <h3 className={styles.heroSubtitle}>Ajudando o meio-ambiente!</h3>
 
-              <p className="hero-description">
+              <p className={styles.heroDescription}>...
                 O oceano também é seu. Aqui, cada escolha ajuda a proteger a vida marinha e manter nossos mares cheios de vida e beleza.
                 Navegue com consciência e faça parte dessa corrente do bem.
               </p>
