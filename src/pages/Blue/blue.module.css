@@ -1,0 +1,344 @@
+/* RESET / BASE */
+.sectionContent {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ================= HEADER ================= */
+.navbar {
+  display: flex;
+  justify-content: center; /* importante */
+  align-items: center;
+  background: #161b44;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navInner {
+  width: 100%;
+  max-width: 1300px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLogo h2 {
+  color: white;
+}
+
+.navMenu {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.navMenuActive {
+  display: flex;
+}
+
+.navLink {
+  padding: 10px 18px;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* ================= HERO ================= */
+.heroSection {
+  min-height: 100vh;
+  background: #161b44;
+  display: flex;
+  align-items: center;
+}
+
+.heroTitle {
+  font-size: 2.3rem;
+  color: #6191c9;
+  font-family: "Miniver", cursive;
+}
+
+.heroSubtitle {
+  color: white;
+  margin-top: 10px;
+}
+
+.heroDescription {
+  color: #ddd;
+  margin-top: 10px;
+  max-width: 600px;
+}
+
+.heroButtons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.order-now {
+  background: #6191c9;
+  color: white;
+}
+
+.contact-us {
+  border: 1px solid white;
+  color: white;
+}
+
+.hero-image-wrapper img {
+  max-width: 350px;
+}
+
+/* ================= ABOUT ================= */
+.aboutSection {
+  padding: 120px 0;
+  background: #f5f5f5;
+}
+
+.aboutContainer {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.aboutText h2 {
+  margin-bottom: 10px;
+}
+
+.aboutImage img {
+  width: 350px;
+  border-radius: 10px;
+}
+
+/* SOCIAL */
+.social {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* ================= DONATION ================= */
+.gallerySection {
+  padding: 100px 0;
+  background: white;
+}
+
+.galleryGrid {
+  display: grid;
+  gap: 20px;
+}
+
+.donation-values {
+  display: flex;
+  gap: 10px;
+}
+
+.donation-btn {
+  padding: 10px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.donation-custom,
+.donation-form,
+.donation-payment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.donation-action {
+  margin-top: 15px;
+}
+
+.donationSubmit {
+  background: #161b44;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ================= PROJECTS ================= */
+.hero {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 15px;
+}
+
+/* ================= CAROUSEL ================= */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.carouselBtn {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.testimonial-card {
+  width: 100%;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.person {
+  text-align: center;
+}
+
+/* DOTS */
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.active {
+  background: #161b44;
+}
+
+/* ================= CONTACT ================= */
+.contactSection {
+  padding: 100px 0;
+  background: #f5f5f5;
+}
+
+.contactContainer {
+  display: flex;
+  gap: 30px;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactTitle {
+  font-size: 2rem;
+}
+
+.contactLine {
+  width: 80px;
+  height: 3px;
+  background: #161b44;
+  margin-bottom: 20px;
+}
+
+/* ================= FOOTER ================= */
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.navMenuActive {
+  display: flex;
+}
+
+.navMenu {
+  display: none;
+}
+
+.navMenu {
+  display: flex;
+}
+
+/* Botôes das abas de Conservação e combate etc */
+
+.cardLink {
+  margin-top: 10px;
+  display: inline-block;
+  color: #161b44;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f0f0f0;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.cardLink:hover {
+  background: #0b1a86;
+  color: white;
+}
