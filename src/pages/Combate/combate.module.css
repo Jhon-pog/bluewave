@@ -1,302 +1,342 @@
-/* ===========================
-   GERAL
-=========================== */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* RESET / BASE */
+.sectionContent {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
 }
 
-:global(body) {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4fbff;
-  color: #333;
-  line-height: 1.6;
-}
-
-:global(html) {
-  scroll-behavior: smooth;
-}
-
-/* ===========================
-   HEADER
-=========================== */
-
+/* ================= HEADER ================= */
 .navbar {
+  display: flex;
+  justify-content: center; /* importante */
+  align-items: center;
+  background: #161b44;
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 100%;
-  max-width: 1400px;
-  height: 80px;
-  background: #0077b6;
+  z-index: 10;
+}
+
+.navInner {
+  width: 100%;
+  max-width: 1300px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
-}
-
-.sectionContent {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.navLogo {
-  color: white;
-  text-decoration: none;
 }
 
 .navLogo h2 {
-  font-size: 30px;
+  color: white;
 }
 
 .navMenu {
   display: flex;
-  list-style: none;
-  gap: 30px;
+}
+
+.navMenuHidden {
+  display: none;
 }
 
 .navLink {
+  padding: 10px 18px;
   color: white;
   text-decoration: none;
-  font-weight: bold;
-  transition: .3s;
+  border-radius: 30px;
+  transition: 0.3s;
 }
 
 .navLink:hover {
-  color: #caf0f8;
+  background: rgba(255, 255, 255, 0.15);
 }
 
-.active {
-  right: 0;
-}
-
-/* ===========================
-   HAMBURGER
-=========================== */
-
+/* HAMBURGER */
 .hamburger {
   display: none;
   flex-direction: column;
+  gap: 5px;
   cursor: pointer;
 }
 
 .hamburger span {
-  width: 28px;
+  width: 25px;
   height: 3px;
   background: white;
-  margin: 4px 0;
-  border-radius: 3px;
 }
 
-/* ===========================
-   ABOUT
-=========================== */
+/* ================= HERO ================= */
+.heroSection {
+  min-height: 100vh;
+  background: #161b44;
+  display: flex;
+  align-items: center;
+}
 
+.heroTitle {
+  font-size: 2.3rem;
+  color: #6191c9;
+  font-family: "Miniver", cursive;
+}
+
+.heroSubtitle {
+  color: white;
+  margin-top: 10px;
+}
+
+.heroDescription {
+  color: #ddd;
+  margin-top: 10px;
+  max-width: 600px;
+}
+
+.heroButtons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.order-now {
+  background: #6191c9;
+  color: white;
+}
+
+.contact-us {
+  border: 1px solid white;
+  color: white;
+}
+
+.hero-image-wrapper img {
+  max-width: 350px;
+}
+
+/* ================= ABOUT ================= */
 .aboutSection {
-  padding: 90px 0;
+  padding: 120px 0;
+  background: #f5f5f5;
 }
 
 .aboutContainer {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
   align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-
-.aboutText {
-  flex: 1;
 }
 
 .aboutText h2 {
-  color: #0077b6;
-  font-size: 38px;
-  margin-bottom: 15px;
-}
-
-.aboutText p {
-  margin: 15px 0;
-  font-size: 18px;
-}
-
-.aboutImage {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .aboutImage img {
-  width: 100%;
-  max-width: 480px;
+  width: 350px;
+  border-radius: 10px;
 }
 
-.line {
-  width: 90px;
-  height: 4px;
-  background: #0096c7;
-  border-radius: 20px;
-  margin-bottom: 30px;
+/* SOCIAL */
+.social {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-/* ===========================
-   AÇÕES
-=========================== */
+/* ================= DONATION ================= */
+.gallerySection {
+  padding: 100px 0;
+  background: white;
+}
+
+.galleryGrid {
+  display: grid;
+  gap: 20px;
+}
+
+.donation-values {
+  display: flex;
+  gap: 10px;
+}
+
+.donation-btn {
+  padding: 10px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.donation-custom,
+.donation-form,
+.donation-payment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.donation-action {
+  margin-top: 15px;
+}
+
+.donationSubmit {
+  background: #161b44;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ================= PROJECTS ================= */
+.hero {
+  padding: 60px 0;
+  text-align: center;
+}
 
 .section {
-  background: #eef8ff;
-  padding: 80px 5%;
-}
-
-.hero {
-  text-align: center;
-  color: #0077b6;
-  font-size: 40px;
+  padding: 80px 0;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .card {
   background: white;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,.12);
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .card img {
   width: 100%;
-  height: 220px;
+  height: 180px;
   object-fit: cover;
 }
 
 .cardContent {
-  padding: 25px;
+  padding: 15px;
 }
 
-.cardContent h3 {
-  margin: 15px 0;
-  color: #0077b6;
+/* ================= CAROUSEL ================= */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
 }
 
-.cardContent p {
-  color: #555;
+.carouselBtn {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-.tag {
-  display: inline-block;
-  background: #0096c7;
-  color: white;
-  padding: 6px 15px;
-  border-radius: 20px;
-  font-size: 14px;
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
 }
 
-/* ===========================
-   GALERIA
-=========================== */
-
-.gallerySection {
-  padding: 80px 0;
+.testimonial-card {
+  width: 100%;
 }
 
-.galleryTitle {
+.testimonial-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.person {
   text-align: center;
-  color: #0077b6;
-  font-size: 38px;
 }
 
-.galleryLine {
-  width: 100px;
-  height: 4px;
-  background: #0096c7;
-  margin: 20px auto 40px;
-  border-radius: 20px;
+/* DOTS */
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+.active {
+  background: #161b44;
+}
 
+/* ================= CONTACT ================= */
+.contactSection {
+  padding: 100px 0;
+  background: #f5f5f5;
+}
+
+.contactContainer {
+  display: flex;
+  gap: 30px;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactTitle {
+  font-size: 2rem;
+}
+
+.contactLine {
+  width: 80px;
+  height: 3px;
+  background: #161b44;
+  margin-bottom: 20px;
+}
+
+/* ================= FOOTER ================= */
 .footerContent {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 20px 0;
   flex-wrap: wrap;
-  gap: 20px;
-  background: #023e8a;
-  color: white;
-  padding: 30px;
 }
 
-.footerSocial {
+.navMenuActive {
   display: flex;
-  gap: 18px;
 }
 
-.footerSocial a {
-  color: white;
+.navMenu {
+  display: none;
+}
+
+.navMenu {
+  display: flex;
+}
+
+/* Botôes das abas de Conservação e combate etc */
+
+.cardLink {
+  margin-top: 10px;
+  display: inline-block;
+  color: #161b44;
+  font-weight: 600;
   text-decoration: none;
-  font-size: 22px;
-  transition: .3s;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f0f0f0;
+  width: fit-content;
+  transition: 0.3s;
 }
 
-.footerSocial a:hover {
-  color: #90e0ef;
-}
-
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: flex;
-  }
-
-  .navMenu {
-    position: absolute;
-    top: 80px;
-    right: -100%;
-    width: 220px;
-    background: #0077b6;
-    flex-direction: column;
-    padding: 25px;
-    transition: .4s;
-  }
-
-  .active {
-    right: 0;
-  }
-
-  .aboutContainer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero {
-    font-size: 32px;
-  }
-
-  .galleryTitle {
-    font-size: 30px;
-  }
-
-  .footerContent {
-    flex-direction: column;
-    text-align: center;
-  }
+.cardLink:hover {
+  background: #0b1a86;
+  color: white;
 }

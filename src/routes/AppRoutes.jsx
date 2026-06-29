@@ -20,7 +20,7 @@ export default function AppRoutes() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Blue />} />
-        <Route path="/combate-plastico" element={<Combate />} />
+        <Route path="/Combate" element={<Combate />} />
         <Route path="/painel" element={<Menu />} />
         <Route path="/multiroes" element={<Multiroes />} />
         <Route path="/recife" element={<Recife />} />

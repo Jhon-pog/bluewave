@@ -1,0 +1,272 @@
+/* ==========================================================================
+   RESET / BASE
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sectionContent {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ==========================================================================
+   HEADER / NAVBAR
+   ========================================================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;       /* Obriga a barra a ocupar toda a largura da tela */
+  height: 80px;
+  background: #161b44; /* Cor azul correspondente à sua imagem */
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+.navLogo {
+  text-decoration: none;
+}
+
+.navLogo h2 {
+  color: white;
+  font-size: 30px;
+}
+
+.navMenu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* HAMBURGER (MOBILE) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   SEÇÕES GERAIS (MONITORAMENTO E IMPACTOS)
+   ========================================================================== */
+.aboutSection {
+  padding: 90px 0;
+  background: #f5f5f5;
+}
+
+/* Mantendo suporte à estrutura flex do seu JSX */
+.aboutContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.aboutText {
+  flex: 1;
+}
+
+.aboutText h2 {
+  color: #161b44;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.aboutText p {
+  margin: 15px 0;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.aboutImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Elemento decorativo de linha */
+.line {
+  height: 4px;
+  background: #6191c9;
+  border-radius: 20px;
+}
+
+/* ==========================================================================
+   CATÁLOGO DE ESPÉCIES (GRID & CARDS)
+   ========================================================================== */
+.section {
+  padding: 80px 0;
+  background: white;
+}
+
+.hero {
+  text-align: center;
+  color: #161b44;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 20px;
+}
+
+.cardContent h3 {
+  margin-bottom: 10px;
+  color: #161b44;
+}
+
+.cardContent p {
+  color: #555;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* Botão Ver Detalhes */
+.btnSubmit {
+  display: inline-block;
+  color: #161b44;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #f0f0f0;
+  width: fit-content;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnSubmit:hover {
+  background: #161b44;
+  color: white;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+  background: #161b44;
+  color: white;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footerSocial {
+  display: flex;
+  gap: 18px;
+}
+
+.footerSocial a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.footerSocial a:hover {
+  color: #6191c9;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navMenu {
+    position: absolute;
+    top: 80px;
+    right: -100%;
+    width: 240px;
+    height: calc(100vh - 80px);
+    background: #161b44;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    transition: 0.4s ease;
+  }
+
+  /* Classe dinâmica controlada pelo state menuAtivo */
+  .active {
+    right: 0;
+  }
+
+  .aboutContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .aboutText h2 {
+    font-size: 28px;
+  }
+
+  .hero {
+    font-size: 32px;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+}

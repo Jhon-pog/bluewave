@@ -26,12 +26,25 @@ export default function Multiroes() {
 
   return (
     <>
-      <header>
-  <nav className={`${styles.navbar} ${styles.sectionContent}`}>
-    className={styles.navLogo}
-      <h2>Blue Wave</h2>
-
-    <div className={styles.hamburger} id="hamburger" onClick={() => setMenuAtivo(!menuAtivo)}>
+     <header>
+  <nav className={styles.navbar}>
+  <div className={styles.navInner}>
+    </div>
+    
+   <li>
+  <Link
+    to="/"
+    className={styles.navLink}
+    onClick={() => setMenuAtivo(false)}
+  >
+   <h2>BlueWave</h2>
+  </Link>
+</li>
+    <div
+      className={styles.hamburger}
+      id="hamburger"
+      onClick={() => setMenuAtivo(!menuAtivo)}
+    >
       <span></span>
       <span></span>
       <span></span>
@@ -43,6 +56,7 @@ export default function Multiroes() {
       <li><a href="#proximos" className={styles.navLink}>Próximos Mutirões</a></li>
       <li><a href="#inscricao" className={styles.navLink}>Inscrição</a></li>
     </ul>
+
   </nav>
 </header>
 

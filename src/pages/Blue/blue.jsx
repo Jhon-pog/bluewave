@@ -26,11 +26,7 @@ export default function blue() {
       </div>
 
       <ul
-        className={
-          menuAtivo
-            ? `${styles.navMenu} ${styles.navMenuActive}`
-            : styles.navMenu
-        }
+       className={ menuAtivo ? styles.navMenu: `${styles.navMenu} ${styles.navMenuHidden}`}
       >
         <li><a className={styles.navLink} href="#">Início</a></li>
         <li><a className={styles.navLink} href="#sobre">Sobre</a></li>
@@ -156,7 +152,7 @@ export default function blue() {
             <div className={styles.card}>
               <img src="https://images.unsplash.com/photo-1514907283155-ea5f4094c70c?q=80&w=1170" alt="Monitoramento de Recifes" />
               <div className={styles.cardContent}>
-            {styles.testimonials}   <h3>Monitoramento de Recifes</h3>
+              <h3>Monitoramento de Recifes</h3>
                 <p>Análise científica contínua da saúde dos recifes de coral e impactos das mudanças climáticas.</p>
                 <a className={styles.cardLink} href="/recife">Saiba mais</a>
               </div>
@@ -236,8 +232,8 @@ export default function blue() {
             </div>
 
             <div className={styles.dot}>
-              <span className={`dot ${slideIndex === 0 ? '{styles.active}' : ''}`} onClick={() => setSlideIndex(0)}></span>
-              <span className={`dot ${slideIndex === 1 ? '{styles.active}' : ''}`} onClick={() => setSlideIndex(1)}></span>
+             <span className={`dot ${slideIndex === 0 ? styles.active : ''}`}></span>
+              <span className={`dot ${slideIndex === 1 ? styles.active : ''}`}></span>
             </div>
           </div>
         </section>

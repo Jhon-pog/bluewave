@@ -33,12 +33,10 @@
 
 .navMenu {
   display: flex;
-  gap: 15px;
-  list-style: none;
 }
 
-.navMenuActive {
-  display: flex;
+.navMenuHidden {
+  display: none;
 }
 
 .navLink {

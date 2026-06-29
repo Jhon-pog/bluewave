@@ -2,34 +2,37 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from "./combate.module.css";
 
-export default function combate() {
+export default function Combate() { 
   const [menuAtivo, setMenuAtivo] = useState(false);
 
   return (
     <>
       <header>
-        <nav className={`${styles.navbar} ${styles.sectionContent}`}>
-          {/* Usando o Link do React Router para voltar à Home com segurança */}
-          <Link to="/" className={styles.navLogo}>
-            <h2>Blue Wave</h2>
-          </Link>
+     <nav className={styles.navbar}>
+  {/* Adicionada a classe sectionContent para alinhar as margens com o resto do site */}
+  <div className={`${styles.navInner} ${styles.sectionContent}`} style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
 
-          <div
-  className={styles.hamburger} onClick={() => setMenuAtivo(!menuAtivo)}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+    <Link to="/" className={styles.navLogo}>
+      <h2>Blue Wave</h2>
+    </Link>
 
-          <ul className={`${styles.navMenu} ${menuAtivo ? styles.active : ""}`}>
-            <li><Link to="/" className={styles.navLink}>← Voltar</Link></li>
-            <li><a href="#inicio" className={styles.navLink}>Início</a></li>
-            <li><a href="#dicas" className={styles.navLink}>Dicas</a></li>
-            <li><a href="#acoes" className={styles.navLink}>Ações</a></li>
-            <li><a href="#importancia" className={styles.navLink}>Importância</a></li>
-            <li><a href="#final" className={styles.navLink}>Conclusão</a></li>
-          </ul>
-        </nav>
+    <div className={styles.hamburger} onClick={() => setMenuAtivo(!menuAtivo)}>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul className={`${styles.navMenu} ${menuAtivo ? styles.navMenuActive : ""}`}>
+      <li><Link to="/" className={styles.navLink}>← Voltar</Link></li>
+      <li><a href="#inicio" className={styles.navLink}>Início</a></li>
+      <li><a href="#dicas" className={styles.navLink}>Dicas</a></li>
+      <li><a href="#acoes" className={styles.navLink}>Ações</a></li>
+      <li><a href="#importancia" className={styles.navLink}>Importância</a></li>
+      <li><a href="#final" className={styles.navLink}>Conclusão</a></li>
+    </ul>
+
+  </div>
+</nav>
       </header>
 
       <main style={{ paddingTop: '80px' }}>
@@ -40,8 +43,7 @@ export default function combate() {
               <div className={styles.aboutText}>
                 <h2>COMBATE AO PLÁSTICO</h2>
                 <div
-  className={styles.line}
-  style={{ margin: '10px auto 30px' }}
+  className={styles.line} style={{ margin: '10px auto 30px' }}
 ></div>
 
                 <p>
@@ -78,26 +80,30 @@ export default function combate() {
         </section>
 
         {/* DICAS */}
-        <section className={styles.aboutSection}>
-          <div className={styles.sectionContent}>
-            <div className={styles.aboutContainer}>
-              <div className={styles.aboutImage}></div>
+<section className={styles.aboutSection}>
+  <div className={styles.sectionContent}>
+    <div className={styles.aboutContainer}>
+      
+      {/* Colocando a imagem dentro da div que você já tinha preparado para ela */}
+      <div className={styles.aboutImage}>
+      </div>
 
-              <div className={styles.aboutText}>
-                <h2>DICAS PARA REDUZIR A POLUIÇÃO</h2>
-                <div className={styles.line}></div>
+      <div className={styles.aboutText}>
+        <h2>DICAS PARA REDUZIR A POLUIÇÃO</h2>
+        <div className={styles.line}></div>
 
-                <p>✔ Utilize garrafas reutilizáveis.</p>
-                <p>✔ Evite copos e canudos descartáveis.</p>
-                <p>✔ Prefira sacolas reutilizáveis.</p>
-                <p>✔ Separe corretamente o lixo reciclável.</p>
-                <p>✔ Nunca descarte lixo em praias ou rios.</p>
-                <p>✔ Reutilize embalagens sempre que possível.</p>
-                <p>✔ Consuma produtos com menos plástico.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <p className={styles.textCenter}>✔ Utilize garrafas reutilizáveis.</p>
+        <p className={styles.textCenter}>✔ Evite copos e canudos descartáveis.</p>
+        <p className={styles.textCenter}>✔ Prefira sacolas reutilizáveis.</p>
+        <p className={styles.textCenter}>✔ Separe corretamente o lixo reciclável.</p>
+        <p className={styles.textCenter}>✔ Nunca descarte lixo em praias ou rios.</p>
+        <p className={styles.textCenter}>✔ Reutilize embalagens sempre que possível.</p>
+        <p className={styles.textCenter}>✔ Consuma produtos com menos plástico.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
         {/* AÇÕES */}
         <section className={styles.section}>
