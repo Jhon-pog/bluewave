@@ -1,0 +1,302 @@
+/* ===========================
+   GERAL
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:global(body) {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4fbff;
+  color: #333;
+  line-height: 1.6;
+}
+
+:global(html) {
+  scroll-behavior: smooth;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1400px;
+  height: 80px;
+  background: #0077b6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+}
+
+.sectionContent {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navLogo {
+  color: white;
+  text-decoration: none;
+}
+
+.navLogo h2 {
+  font-size: 30px;
+}
+
+.navMenu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.navLink:hover {
+  color: #caf0f8;
+}
+
+.active {
+  right: 0;
+}
+
+/* ===========================
+   HAMBURGER
+=========================== */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 3px;
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.aboutSection {
+  padding: 90px 0;
+}
+
+.aboutContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.aboutText {
+  flex: 1;
+}
+
+.aboutText h2 {
+  color: #0077b6;
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.aboutText p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.aboutImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutImage img {
+  width: 100%;
+  max-width: 480px;
+}
+
+.line {
+  width: 90px;
+  height: 4px;
+  background: #0096c7;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+/* ===========================
+   AÇÕES
+=========================== */
+
+.section {
+  background: #eef8ff;
+  padding: 80px 5%;
+}
+
+.hero {
+  text-align: center;
+  color: #0077b6;
+  font-size: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 25px;
+}
+
+.cardContent h3 {
+  margin: 15px 0;
+  color: #0077b6;
+}
+
+.cardContent p {
+  color: #555;
+}
+
+.tag {
+  display: inline-block;
+  background: #0096c7;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* ===========================
+   GALERIA
+=========================== */
+
+.gallerySection {
+  padding: 80px 0;
+}
+
+.galleryTitle {
+  text-align: center;
+  color: #0077b6;
+  font-size: 38px;
+}
+
+.galleryLine {
+  width: 100px;
+  height: 4px;
+  background: #0096c7;
+  margin: 20px auto 40px;
+  border-radius: 20px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #023e8a;
+  color: white;
+  padding: 30px;
+}
+
+.footerSocial {
+  display: flex;
+  gap: 18px;
+}
+
+.footerSocial a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  transition: .3s;
+}
+
+.footerSocial a:hover {
+  color: #90e0ef;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navMenu {
+    position: absolute;
+    top: 80px;
+    right: -100%;
+    width: 220px;
+    background: #0077b6;
+    flex-direction: column;
+    padding: 25px;
+    transition: .4s;
+  }
+
+  .active {
+    right: 0;
+  }
+
+  .aboutContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero {
+    font-size: 32px;
+  }
+
+  .galleryTitle {
+    font-size: 30px;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+}
