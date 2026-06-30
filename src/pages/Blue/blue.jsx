@@ -270,11 +270,7 @@ export default function blue() {
         <div className={`${styles.sectionContent} ${styles.footerContent}`}>
           <p>© 2026 Blue Wave</p>
 
-          <div className="footer-social">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer"><i className="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer"><i className="fab fa-x-twitter"></i></a>
-          </div>
+          
 
           <p>Política de Privacidade • Termos</p>
         </div>
